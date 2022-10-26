@@ -1,0 +1,16 @@
+{
+  "name": "portfolio-website",
+  "version": "0.0.0",
+  "description": "Portfolio website with bio, contact info and project showcase",
+  "main": "index.html",
+  "scripts": {
+    "sassw": "sass --watch ./sass/index.scss:./index.css --no-source-map",
+    "bsync": "browser-sync start --server --files *.html *.css *.js --browser chrome"
+  },
+  "author": "Blaz Jerenec",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.10",
+    "sass": "^1.55.0"
+  }
+}
