@@ -1,0 +1,32 @@
+@use "../abstracts" as *;
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10rem;
+  .container--header {
+    @extend %container;
+    margin: 0 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    height: 3.2rem;
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    font-family: $font-body;
+  }
+  &__nav-item {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    &:not(:last-child) {
+      margin-right: 3rem;
+    }
+  }
+}
