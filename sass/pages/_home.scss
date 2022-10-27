@@ -1,0 +1,32 @@
+@use "../abstracts" as *;
+
+.container--home-main {
+  @extend %container;
+  display: flex;
+  flex-direction: column;
+  margin: 0 5rem;
+}
+
+.hero {
+  position: relative;
+  height: 60rem;
+  background: url("../../assets/images/image-homepage-hero@2x.jpg") center/cover no-repeat;
+  &__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: $color-secondary-light-grey;
+    width: 45rem;
+    padding-top: 5.5rem;
+  }
+  &__heading {
+    font-family: $font-heading;
+    font-weight: 700;
+    width: 13ch;
+    font-size: 5rem;
+    line-height: 110%;
+  }
+  &__action {
+    margin-top: 5.5rem;
+  }
+}
