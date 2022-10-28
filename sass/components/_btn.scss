@@ -1,0 +1,35 @@
+@use "../abstracts/" as *;
+@use "sass:color" as color;
+
+.btn {
+  font-family: inherit;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  padding: 1.7rem 3.5rem;
+  cursor: pointer;
+}
+
+.icn-btn {
+  display: flex;
+  align-items: stretch;
+  cursor: pointer;
+  &--hero {
+    color: rgb(255, 255, 255);
+    background-color: $color-primary-blue;
+  }
+  &__icon {
+    display: flex;
+    align-items: center;
+    img {
+      display: block;
+    }
+    &--hero {
+      background-color: color.scale($color-primary-blue, $lightness: -10%);
+      padding: 0 1.6rem;
+    }
+  }
+  &__text {
+    @extend .btn;
+  }
+}
