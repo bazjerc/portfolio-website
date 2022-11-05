@@ -1,0 +1,13 @@
+@use "../abstracts" as *;
+
+.cta {
+  display: flex;
+  align-items: center;
+  margin: 14rem 0;
+  &__text {
+    font-family: $font-heading;
+    font-size: 4rem;
+    font-weight: 700;
+    max-width: 14ch;
+  }
+}

@@ -17,6 +17,12 @@ body {
   font-family: $font-body;
   font-size: 1.6rem;
   color: $color-primary-grayish-blue;
+  background-color: $color-secondary-light-grey;
+}
+
+main {
+  display: flex;
+  justify-content: center;
 }
 
 a:link,
