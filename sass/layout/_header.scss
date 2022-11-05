@@ -1,18 +1,19 @@
 @use "../abstracts" as *;
 
+.container--header {
+  @extend %container;
+  margin: 0 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 10rem;
-  .container--header {
-    @extend %container;
-    margin: 0 5rem;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+  height: 15rem;
   &__logo {
     height: 3.2rem;
   }
