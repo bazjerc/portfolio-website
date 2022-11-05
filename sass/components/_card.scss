@@ -1,0 +1,45 @@
+@use "../abstracts/" as *;
+
+.card {
+  display: flex;
+  &__img {
+    width: 50%;
+    max-height: 80rem;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &--about {
+    max-height: 60rem;
+  }
+  &__content {
+    width: 50%;
+  }
+  &__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 0 0 0 20%;
+    padding: 6rem 0 4.5rem 0;
+    border-width: 1px 0 1px 0;
+    border-color: $color-secondary-grey;
+    border-style: solid;
+    height: 100%;
+  }
+  &__main {
+    margin-bottom: auto;
+  }
+  &__heading {
+    font-family: $font-heading;
+    font-size: 4rem;
+    margin-bottom: 2.5rem;
+  }
+  &__text {
+    line-height: 190%;
+  }
+  &__action {
+  }
+}
