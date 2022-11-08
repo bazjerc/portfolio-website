@@ -12,6 +12,13 @@ $color-secondary-light-grey: rgb(250, 250, 250);
 $color-secondary-grey: rgb(234, 234, 235);
 $color-secondary-red: rgb(244, 48, 48);
 
+// Breakpoints 
+
+$breakpoints: (
+  phone: 576px,
+  tablet: 992px,
+)
+
 
 /* // Theme variables
 :root {

@@ -2,7 +2,6 @@
 
 .container--header {
   @extend %container;
-  margin: 0 5rem;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -14,6 +13,9 @@
   justify-content: center;
   align-items: center;
   height: 15rem;
+  @include media-max(768px) {
+    height: 11rem;
+  }
   &__logo {
     height: 3.2rem;
   }

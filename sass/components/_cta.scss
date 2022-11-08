@@ -3,11 +3,26 @@
 .cta {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin: 14rem 0;
+  @include media("phone") {
+    flex-direction: column;
+  }
   &__text {
     font-family: $font-heading;
     font-size: 4rem;
     font-weight: 700;
     max-width: 14ch;
+    flex-shrink: 1;
+    @include media("phone") {
+      margin-bottom: 5rem;
+    }
+  }
+  .separator {
+    flex-grow: 1;
+    margin: 0 4rem;
+    @include media("phone") {
+      display: none;
+    }
   }
 }

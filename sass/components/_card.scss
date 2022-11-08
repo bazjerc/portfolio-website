@@ -2,9 +2,18 @@
 
 .card {
   display: flex;
+  @include media("phone") {
+    flex-direction: column;
+  }
   &__img {
     width: 50%;
-    max-height: 80rem;
+    @include media("tablet") {
+      width: 40%;
+    }
+    @include media("phone") {
+      width: 100%;
+      margin-bottom: 3rem;
+    }
     img {
       display: block;
       width: 100%;
@@ -14,20 +23,46 @@
   }
   &--about {
     max-height: 60rem;
+    @include media("tablet") {
+      max-height: initial;
+    }
   }
   &__content {
     width: 50%;
+    @include media("tablet") {
+      width: 60%;
+    }
+    @include media("phone") {
+      width: 100%;
+    }
   }
   &__content-wrapper {
     display: flex;
     flex-direction: column;
     width: 60%;
-    margin: 0 0 0 20%;
+    margin-left: 20%;
     padding: 6rem 0 4.5rem 0;
     border-width: 1px 0 1px 0;
     border-color: $color-secondary-grey;
     border-style: solid;
     height: 100%;
+    @include media-max(1380px) {
+      padding: 4rem 0 3.5rem 0;
+      width: 70%;
+      margin-left: 15%;
+    }
+    @include media-max(1080px) {
+      width: 80%;
+    }
+    @include media("tablet") {
+      width: 90%;
+      margin-left: 10%;
+    }
+    @include media("phone") {
+      width: 100%;
+      margin-left: initial;
+
+    }
   }
   &__main {
     margin-bottom: auto;
@@ -41,5 +76,6 @@
     line-height: 190%;
   }
   &__action {
+    margin-top: 3rem;
   }
 }

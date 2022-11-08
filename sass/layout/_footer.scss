@@ -6,7 +6,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 5rem;
+  @include media("phone") {
+    flex-direction: column;
+    margin: 6rem 0;
+  }
 }
 
 .footer {
@@ -16,16 +19,30 @@
   height: 8rem;
   background-color: $color-primary-grayish-blue;
   color: $color-secondary-light-grey;
+  @include media("phone") {
+    height: auto;
+  }
   &__main {
     display: flex;
     align-items: center;
+    @include media("phone") {
+      flex-direction: column;
+    }
   }
   &__logo {
     height: 3.2rem;
     margin-right: 4.5rem;
+    @include media("phone") {
+      margin-right: initial;
+      margin-bottom: 3.5rem;
+    }
   }
   &__nav {
     display: flex;
+    @include media("phone") {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__nav-item {
     text-transform: uppercase;
@@ -33,9 +50,16 @@
     letter-spacing: 0.2rem;
     &:not(:last-child) {
       margin-right: 4rem;
+      @include media("phone") {
+        margin-right: initial;
+        margin-bottom: 3rem;
+      }
     }
   }
   &__social {
+    @include media("phone") {
+      margin-top: 3.5rem;
+    }
   }
   &__social-icon {
     display: block;

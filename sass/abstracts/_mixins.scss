@@ -1,0 +1,13 @@
+@use "./variables" as *;
+@use "sass:map";
+
+@mixin media($device) {
+  @media screen and (max-width: map.get($breakpoints, $device)) {
+    @content;
+  }
+}
+@mixin media-max($max-width) {
+  @media screen and (max-width: $max-width) {
+    @content;
+  }
+}
