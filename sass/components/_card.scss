@@ -61,19 +61,16 @@
     @include media("phone") {
       width: 100%;
       margin-left: initial;
-
     }
   }
   &__main {
     margin-bottom: auto;
   }
   &__heading {
-    font-family: $font-heading;
-    font-size: 4rem;
     margin-bottom: 2.5rem;
   }
   &__text {
-    line-height: 190%;
+    @extend %paragraph;
   }
   &__action {
     margin-top: 3rem;
