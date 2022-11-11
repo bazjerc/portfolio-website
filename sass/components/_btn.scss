@@ -12,6 +12,11 @@
   white-space: nowrap;
 }
 
+.btn--full {
+  color: rgb(255, 255, 255);
+  background-color: $color-primary-blue;
+}
+
 .icn-btn {
   display: flex;
   align-items: stretch;

@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "sassw": "sass --watch ./sass/index.scss:./index.css --no-source-map",
-    "bsync": "browser-sync start --server --files *.html *.css *.js --browser chrome",
+    "bsync": "browser-sync start --server --files *.html *.css *.js pages/*/*.html --browser chrome",
     "start": "concurrently \"npm run bsync\" \"npm run sassw\""
   },
   "author": "Blaz Jerenec",
