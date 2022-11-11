@@ -1,0 +1,28 @@
+@use "../abstracts" as *;
+
+.contact-form {
+  &__field {
+    &:not(:last-of-type) {
+      margin-bottom: 3rem;
+    }
+    label {
+      display: block;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+    input {
+      @extend %text-input;
+      width: 100%;
+      line-height: normal;
+    }
+    textarea {
+      @extend %text-input;
+      width: 100%;
+      resize: none;
+    }
+  }
+  &__submit {
+    margin-top: 2rem;
+  }
+}
