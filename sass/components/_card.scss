@@ -5,14 +5,25 @@
   @include media("phone") {
     flex-direction: column;
   }
+  &--about {
+    max-height: 60rem;
+    @include media("tablet") {
+      max-height: initial;
+    }
+  }
   &__img {
     width: 50%;
-    @include media("tablet") {
-      width: 40%;
-    }
     @include media("phone") {
       width: 100%;
       margin-bottom: 3rem;
+    }
+    &--about {
+      @include media("tablet") {
+        width: 40%;
+      }
+      @include media("phone") {
+        width: 100%;
+      }
     }
     img {
       display: block;
@@ -21,19 +32,26 @@
       object-fit: cover;
     }
   }
-  &--about {
-    max-height: 60rem;
-    @include media("tablet") {
-      max-height: initial;
+  &:nth-child(2n) {
+    .card__img {
+      order: 1;
+      @include media("phone") {
+        order: 0;
+      }
     }
   }
   &__content {
     width: 50%;
-    @include media("tablet") {
-      width: 60%;
-    }
     @include media("phone") {
       width: 100%;
+    }
+    &--about {
+      @include media("tablet") {
+        width: 60%;
+      }
+      @include media("phone") {
+        width: 100%;
+      }
     }
   }
   &__content-wrapper {
@@ -41,32 +59,47 @@
     flex-direction: column;
     width: 60%;
     margin-left: 20%;
-    padding: 6rem 0 4.5rem 0;
+    padding: 12% 0;
     border-width: 1px 0 1px 0;
     border-color: $color-secondary-grey;
     border-style: solid;
     height: 100%;
-    @include media-max(1380px) {
-      padding: 4rem 0 3.5rem 0;
-      width: 70%;
-      margin-left: 15%;
-    }
-    @include media-max(1080px) {
-      width: 80%;
-    }
     @include media("tablet") {
-      width: 90%;
-      margin-left: 10%;
+      width: initial;
     }
     @include media("phone") {
-      width: 100%;
       margin-left: initial;
+    }
+    &--about {
+      padding: 8% 0;
+      @include media-max(1380px) {
+        width: 70%;
+        margin-left: 15%;
+      }
+      @include media-max(1080px) {
+        width: initial;
+      }
+      @include media("phone") {
+        margin-left: initial;
+      }
+    }
+  }
+  &:nth-child(2n) {
+    .card__content-wrapper {
+      @include media("tablet") {
+        margin-right: 20%;
+        margin-left: initial;
+      }
+      @include media("phone") {
+        margin-right: initial;
+      }
     }
   }
   &__main {
     margin-bottom: auto;
   }
   &__heading {
+    @extend %heading-primary;
     margin-bottom: 2.5rem;
   }
   &__text {

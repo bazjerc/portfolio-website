@@ -1,0 +1,7 @@
+@use "../abstracts/" as *;
+
+.container--portfolio-main {
+  @extend %container;
+  display: flex;
+  flex-direction: column;
+}
