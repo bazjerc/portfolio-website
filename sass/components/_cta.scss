@@ -8,7 +8,7 @@
   @include media("phone") {
     flex-direction: column;
   }
-  &__text {
+  &__subject {
     font-family: $font-heading;
     font-size: 4rem;
     font-weight: 700;
@@ -18,9 +18,11 @@
       margin-bottom: 5rem;
     }
   }
-  .separator {
+  &__separator-line {
     flex-grow: 1;
+    height: 1px;
     margin: 0 4rem;
+    background-color: $color-secondary-grey;
     @include media("phone") {
       display: none;
     }

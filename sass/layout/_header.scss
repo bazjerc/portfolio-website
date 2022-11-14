@@ -19,17 +19,4 @@
   &__logo {
     height: 3.2rem;
   }
-  &__nav {
-    display: flex;
-    align-items: center;
-    font-family: $font-body;
-  }
-  &__nav-item {
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    &:not(:last-child) {
-      margin-right: 3rem;
-    }
-  }
 }

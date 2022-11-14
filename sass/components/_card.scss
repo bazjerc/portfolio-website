@@ -5,19 +5,19 @@
   @include media("phone") {
     flex-direction: column;
   }
-  &--about {
+  &--bio {
     max-height: 60rem;
     @include media("tablet") {
       max-height: initial;
     }
   }
-  &__img {
+  &__figure {
     width: 50%;
     @include media("phone") {
       width: 100%;
       margin-bottom: 3rem;
     }
-    &--about {
+    &--bio {
       @include media("tablet") {
         width: 40%;
       }
@@ -32,20 +32,12 @@
       object-fit: cover;
     }
   }
-  &:nth-child(2n) {
-    .card__img {
-      order: 1;
-      @include media("phone") {
-        order: 0;
-      }
-    }
-  }
   &__content {
     width: 50%;
     @include media("phone") {
       width: 100%;
     }
-    &--about {
+    &--bio {
       @include media("tablet") {
         width: 60%;
       }
@@ -70,7 +62,7 @@
     @include media("phone") {
       margin-left: initial;
     }
-    &--about {
+    &--bio {
       padding: 8% 0;
       @include media-max(1380px) {
         width: 70%;
@@ -84,21 +76,10 @@
       }
     }
   }
-  &:nth-child(2n) {
-    .card__content-wrapper {
-      @include media("tablet") {
-        margin-right: 20%;
-        margin-left: initial;
-      }
-      @include media("phone") {
-        margin-right: initial;
-      }
-    }
-  }
   &__main {
     margin-bottom: auto;
   }
-  &__heading {
+  &__title {
     @extend %heading-primary;
     margin-bottom: 2.5rem;
   }
@@ -107,5 +88,25 @@
   }
   &__action {
     margin-top: 3rem;
+  }
+
+  &--swap-order {
+    &:nth-child(2n) {
+      .card__figure {
+        order: 1;
+        @include media("phone") {
+          order: 0;
+        }
+      }
+      .card__content-wrapper {
+        @include media("tablet") {
+          margin-right: 20%;
+          margin-left: initial;
+        }
+        @include media("phone") {
+          margin-right: initial;
+        }
+      }
+    }
   }
 }

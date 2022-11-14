@@ -34,11 +34,8 @@
   &__text {
     @extend %paragraph;
   }
-  &__social {
+
+  .social {
     margin-top: 2.5rem;
-  }
-  &__social-icon {
-    width: 2.5rem;
-    display: block;
   }
 }

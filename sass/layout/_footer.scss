@@ -37,32 +37,26 @@
       margin-bottom: 3.5rem;
     }
   }
-  &__nav {
+
+  .nav {
     display: flex;
     @include media("phone") {
       flex-direction: column;
       align-items: center;
     }
-  }
-  &__nav-item {
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    letter-spacing: 0.2rem;
-    &:not(:last-child) {
-      margin-right: 4rem;
-      @include media("phone") {
-        margin-right: initial;
-        margin-bottom: 3rem;
+    &__item {
+      &:not(:last-child) {
+        @include media("phone") {
+          margin-right: initial;
+          margin-bottom: 3rem;
+        }
       }
     }
   }
-  &__social {
+  
+  .social {
     @include media("phone") {
       margin-top: 3.5rem;
     }
-  }
-  &__social-icon {
-    display: block;
-    width: 2.5rem;
   }
 }
