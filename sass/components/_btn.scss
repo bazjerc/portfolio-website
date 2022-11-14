@@ -11,7 +11,7 @@
   border: 1px solid $color-primary-grayish-blue;
   white-space: nowrap;
   &--full {
-    color: rgb(255, 255, 255);
+    color: $color-secondary-light-grey;
     background-color: $color-primary-blue;
     border: none;
   }
@@ -20,7 +20,7 @@
 .icn-btn {
   display: flex;
   align-items: stretch;
-  color: rgb(255, 255, 255);
+  color: $color-secondary-light-grey;
   background-color: $color-primary-blue;
   cursor: pointer;
   &__icon-wrapper {
