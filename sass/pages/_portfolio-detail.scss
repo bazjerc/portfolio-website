@@ -38,7 +38,7 @@
   padding: 4rem 0;
   @include media("tablet") {
     width: 100%;
-    padding: 2.5rem 0;
+    padding: 3rem 0;
   }
   &__title {
     @extend %heading-primary;
