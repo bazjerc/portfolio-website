@@ -16,6 +16,7 @@
     flex-shrink: 1;
     @include media("phone") {
       margin-bottom: 5rem;
+      text-align: center;
     }
   }
   &__separator-line {
