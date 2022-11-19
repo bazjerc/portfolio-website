@@ -6,60 +6,71 @@
   flex-direction: column;
 }
 
-.container--portfolio-detail-content {
+.container-project-content {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  margin-bottom: 7rem;
+  align-items: flex-start;
+  @include media("tablet") {
+    flex-direction: column;
+  }
 }
 
-.portfolio-hero {
+.project-hero {
   background: url("../../assets/images/portfolio-detail/image-manage-hero@2x.jpg")
     top/cover no-repeat;
   height: 50rem;
-  margin-bottom: 11rem;
+  margin-bottom: 10rem;
 }
 
-.portfolio-summary {
+.project-summary {
   width: 30%;
   border-width: 1px 0 1px 0;
   border-color: $color-secondary-grey;
   border-style: solid;
   padding: 4rem 0;
+  @include media("tablet") {
+    width: 100%;
+  }
   &__title {
     @extend %heading-primary;
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
   }
   &__text {
     @extend %paragraph;
-    @include media("tablet") {
-      float: right;
-      width: 50%;
-    }
+    margin-bottom: 3rem;
   }
   &__keywords {
     display: block;
     font-size: 1.6rem;
     color: #5fb4a2;
     font-weight: 700;
+    p:not(:last-child) {
+      margin-bottom: 2rem;
+    }
   }
-  &__btn {
-    margin-top: 2rem;
+  &__action {
+    margin-top: 3.5rem;
   }
 }
 
-.portfolio-background {
+.project-background {
   width: 60%;
+  @include media("tablet") {
+    width: 100%;
+    margin-top: 4rem;
+  }
   &__heading {
     @extend %heading-secondary;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
   }
   &__text {
     @extend %paragraph;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
   }
-  &__preview-image {
+  &__preview-img {
     &:not(:last-child) {
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
     }
     img {
       width: 100%;

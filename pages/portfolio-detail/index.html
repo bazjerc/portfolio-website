@@ -26,25 +26,27 @@
     </header>
     <main>
       <div class="container--portfolio-detail-main">
-        <div class="portfolio-hero"></div>
-        <div class="container--portfolio-detail-content">
-          <section class="portfolio-summary">
-            <h1 class="portfolio-summary__title">Manage</h1>
-            <p class="portfolio-summary__text">
+        <div class="project-hero"></div>
+        <div class="container-project-content">
+          <section class="project-summary">
+            <h1 class="project-summary__title">Manage</h1>
+            <p class="project-summary__text">
               This project required me to build a fully responsive landing page
               to the designs provided. I used HTML5, along with CSS Grid and
               JavaScript for the areas that required interactivity, such as the
               testimonial slider.
             </p>
-            <div class="portfolio-summary__keywords">
+            <div class="project-summary__keywords">
               <p>Interaction Design / Front End Development</p>
               <p>HTML / CSS / JS</p>
             </div>
-            <button class="portfolio-summary__btn btn">Visit website</button>
+            <div class="project-summary__action">
+              <button class="btn">Visit website</button>
+            </div>
           </section>
-          <section class="portfolio-background">
-            <h2 class="portfolio-background__heading">Project Background</h2>
-            <p class="portfolio-background__text">
+          <section class="project-background">
+            <h2 class="project-background__heading">Project Background</h2>
+            <p class="project-background__text">
               This project was a front-end challenge from Frontend Mentor. It’s
               a platform that enables you to practice building websites to a
               design and project brief. Each challenge includes mobile and
@@ -54,15 +56,15 @@
               something new with each project, helping me to improve and adapt
               my style.
             </p>
-            <h2 class="portfolio-background__heading">Static Previews</h2>
-            <div class="portfolio-background__preview">
-              <div class="portfolio-background__preview-image">
+            <h2 class="project-background__heading">Static Previews</h2>
+            <div class="project-background__preview">
+              <div class="project-background__preview-img">
                 <img
                   src="../../assets/images/portfolio-detail/image-manage-preview-1@2x.jpg"
-                  alt="Portfolio preview"
+                  alt="Project preview"
                 />
               </div>
-              <div class="portfolio-background__preview-image">
+              <div class="project-background__preview-img">
                 <img
                   src="../../assets/images/portfolio-detail/image-manage-preview-2@2x.jpg"
                   alt="Portfolio preview"
@@ -72,32 +74,32 @@
           </section>
         </div>
         <div class="navigation">
-          <div class="navigation__left">
-            <div class="navigation__btn navigation__btn--left">
+          <div class="navigation__tile navigation__tile--left">
+            <button class="navigation__btn navigation__btn--left">
               <img
                 class="navigation__btn-icon navigation__btn-icon--left"
                 src="../../assets/icons/arrow-left.svg"
                 alt=""
               />
               <div class="navigation__btn-text">
-                <h3>Flyo</h3>
+                <h3>Fylo</h3>
                 <p>Previous Project</p>
               </div>
-            </div>
+            </button>
           </div>
           <div class="navigation__separator-line"></div>
-          <div class="navigation__right">
-            <div class="navigation__btn navigation__btn--right">
-              <div class="navigation__btn-text">
-                <h3>Bookmark</h3>
-                <p>Next Project</p>
-              </div>
+          <div class="navigation__tile navigation__tile--right">
+            <button class="navigation__btn navigation__btn--right">
               <img
                 class="navigation__btn-icon navigation__btn-icon--right"
                 src="../../assets/icons/arrow-right.svg"
                 alt=""
               />
-            </div>
+              <div class="navigation__btn-text">
+                <h3>Bookmark</h3>
+                <p>Next Project</p>
+              </div>
+            </button>
           </div>
         </div>
         <aside class="cta">
