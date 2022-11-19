@@ -2,51 +2,73 @@
 
 .navigation {
   display: flex;
-
   border-width: 1px 0 1px 0;
   border-color: $color-secondary-grey;
   border-style: solid;
-  &__left {
-    padding: 2rem 0;
+  &__tile {
+    padding: 3rem 0;
     display: flex;
-    justify-content: left;
     flex-basis: 100%;
-  }
-  &__right {
-    padding: 2rem 0;
-    display: flex;
-    justify-content: right;
-    flex-basis: 100%;
+    @include media("phone") {
+      padding: 2.5rem 0 3rem 0;
+    }
+    &--left {
+      justify-content: left;
+    }
+    &--right {
+      justify-content: right;
+    }
   }
   &__btn {
     display: flex;
-    /*     width: 30%; */
     align-items: center;
+    @include media("phone") {
+      flex-direction: column;
+    }
     &--left {
       text-align: left;
+      padding-right: 2rem;
+      @include media("phone") {
+        align-items: flex-start;
+      }
     }
     &--right {
       text-align: right;
+      padding-left: 2rem;
+      @include media("phone") {
+        align-items: flex-end;
+      }
     }
   }
   &__btn-text {
     h3 {
       @extend %heading-secondary;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
     p {
       font-size: 1.6rem;
-      /* color: $color-secondary-grey; */
+      color: $color-secondary-grey;
     }
   }
   &__btn-icon {
-    /* pointer-events: none; */
     display: block;
+    @include media("phone") {
+      margin-bottom: 1.5rem;
+    }
     &--left {
-      margin-right: 1rem;
+      margin-right: 3rem;
+      @include media("phone") {
+        margin-right: initial;
+        order: 0;
+      }
     }
     &--right {
-      margin-left: 1rem;
+      margin-left: 3rem;
+      order: 1;
+      @include media("phone") {
+        margin-left: initial;
+        order: 0;
+      }
     }
   }
 
