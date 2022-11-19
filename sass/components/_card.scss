@@ -13,11 +13,16 @@
   }
   &__figure {
     width: 50%;
+    @include media("tablet") {
+      padding: 4% 0;
+    }
     @include media("phone") {
+      padding: initial;
       width: 100%;
-      margin-bottom: 3rem;
+      margin-bottom: 3.5rem;
     }
     &--bio {
+      padding: 0;
       @include media("tablet") {
         width: 40%;
       }
@@ -58,8 +63,10 @@
     height: 100%;
     @include media("tablet") {
       width: initial;
+      padding: 8% 0;
     }
     @include media("phone") {
+      padding: 5% 0 8% 0;
       margin-left: initial;
     }
     &--bio {
@@ -72,6 +79,7 @@
         width: initial;
       }
       @include media("phone") {
+        padding: 5% 0 8% 0;
         margin-left: initial;
       }
     }
@@ -88,25 +96,5 @@
   }
   &__action {
     margin-top: 3rem;
-  }
-
-  &--swap-order {
-    &:nth-child(2n) {
-      .card__figure {
-        order: 1;
-        @include media("phone") {
-          order: 0;
-        }
-      }
-      .card__content-wrapper {
-        @include media("tablet") {
-          margin-right: 20%;
-          margin-left: initial;
-        }
-        @include media("phone") {
-          margin-right: initial;
-        }
-      }
-    }
   }
 }

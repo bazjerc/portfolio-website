@@ -22,6 +22,7 @@
   &__btn {
     display: flex;
     align-items: center;
+    cursor: pointer;
     @include media("phone") {
       flex-direction: column;
     }

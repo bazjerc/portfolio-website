@@ -4,6 +4,10 @@
   @extend %container;
   display: flex;
   flex-direction: column;
+  padding-top: 3rem;
+  @include media("phone") {
+    padding-top: initial;
+  }
 }
 
 .container-project-content {
@@ -21,6 +25,9 @@
     top/cover no-repeat;
   height: 50rem;
   margin-bottom: 10rem;
+  @include media("tablet") {
+    margin-bottom: 4rem;
+  }
 }
 
 .project-summary {
@@ -31,6 +38,7 @@
   padding: 4rem 0;
   @include media("tablet") {
     width: 100%;
+    padding: 2.5rem 0;
   }
   &__title {
     @extend %heading-primary;

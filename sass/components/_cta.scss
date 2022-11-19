@@ -5,8 +5,12 @@
   align-items: center;
   justify-content: space-between;
   margin: 14rem 0;
+  @include media("tablet") {
+    margin: 8rem 0;
+  }
   @include media("phone") {
     flex-direction: column;
+    margin: 7rem 0;
   }
   &__subject {
     font-family: $font-heading;

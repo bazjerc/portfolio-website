@@ -13,7 +13,7 @@
   justify-content: center;
   align-items: center;
   height: 15rem;
-  @include media-max(768px) {
+  @include media("tablet") {
     height: 11rem;
   }
   &__logo {

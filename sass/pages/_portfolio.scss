@@ -4,4 +4,36 @@
   @extend %container;
   display: flex;
   flex-direction: column;
+  padding-top: 3rem;
+  @include media("phone") {
+    padding-top: initial;
+  }
+}
+
+.project-list {
+  .card {
+    &:not(:last-child) {
+      margin-bottom: 8rem;
+      @include media("tablet") {
+        margin-bottom: 5rem;
+      }
+    }
+    &:nth-child(2n) {
+      .card__figure {
+        order: 1;
+        @include media("phone") {
+          order: 0;
+        }
+      }
+      .card__content-wrapper {
+        @include media("tablet") {
+          margin-right: 20%;
+          margin-left: initial;
+        }
+        @include media("phone") {
+          margin-right: initial;
+        }
+      }
+    }
+  }
 }

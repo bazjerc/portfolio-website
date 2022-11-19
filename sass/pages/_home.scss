@@ -37,20 +37,17 @@
   &__heading {
     font-family: $font-heading;
     font-weight: 700;
-    width: 13ch;
+    max-width: 13ch;
     font-size: 5rem;
     line-height: 110%;
-    margin: 5.5rem 0 5.5rem;
+    margin: 5.5rem 0;
     @include media("tablet") {
       font-size: 4rem;
-      width: 16ch;
+      max-width: 16ch;
       margin: 5.5rem 0 4rem;
     }
     @include media("phone") {
       margin: 3.5rem 0 4rem;
     }
   }
-/*   &__action {
-    
-  } */
 }
