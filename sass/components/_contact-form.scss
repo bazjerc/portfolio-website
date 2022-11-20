@@ -15,14 +15,30 @@
       @extend %text-input;
       width: 100%;
       line-height: normal;
+      border: 1px solid transparent;
     }
     textarea {
       @extend %text-input;
       width: 100%;
       resize: none;
+      border: 1px solid transparent;
     }
   }
   &__submit-btn {
     margin-top: 2rem;
+  }
+}
+
+.contact-form {
+  &__field {
+    input:focus {
+      border-color: $color-primary-cyan;
+    }
+    textarea:focus {
+      border-color: $color-primary-cyan;
+    }
+  }
+  &__submit-btn:focus {
+    background-color: $color-primary-cyan;
   }
 }
