@@ -4,5 +4,21 @@
   &__icon {
     width: 2.5rem;
     display: block;
+    cursor: pointer;
+  }
+}
+
+.social {
+  &__icon {
+    transition: transform 0.1s;
+  }
+  &__icon {
+    &:hover {
+      transform: scale(1.2) rotate(10deg);
+      &:active {
+        transition: transform 0.07s;
+        transform: scale(1.12) rotate(10deg);
+      }
+    }
   }
 }
