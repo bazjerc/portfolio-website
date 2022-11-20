@@ -12,3 +12,9 @@
     }
   }
 }
+
+.nav {
+  &__item.selected {
+    color: $color-primary-cyan;
+  }
+}
