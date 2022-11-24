@@ -2,6 +2,7 @@
 
 .contact-form {
   &__field {
+    position: relative;
     &:not(:last-of-type) {
       margin-bottom: 3rem;
     }
@@ -24,8 +25,17 @@
       border: 1px solid transparent;
     }
   }
+  &__validation-text {
+    display: none;
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    color: rgb(244, 48, 48);
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 700;
+  }
   &__submit-btn {
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
 }
 
@@ -34,8 +44,14 @@
     input:focus {
       border-color: $color-primary-cyan;
     }
+    input.invalid {
+      border-color: rgb(244, 48, 48);
+    }
     textarea:focus {
       border-color: $color-primary-cyan;
+    }
+    textarea.invalid {
+      border-color: rgb(244, 48, 48);
     }
   }
   &__submit-btn:focus {
