@@ -8,20 +8,23 @@
 
 .hero {
   position: relative;
-  height: 60rem;
+  height: calc(100vh - 24rem);
+  min-height: 40rem;
   margin-bottom: 15rem;
+  @include media("tablet") {
+    height: calc(100vh - 20rem);
+  }
   @include media("phone") {
     display: flex;
     flex-direction: column;
-    height: initial;
+    height: calc(100vh - 15rem);
+    min-height: 45rem;
+    margin-bottom: 10rem;
   }
   &__background {
     height: 100%;
     background: url("../../assets/images/image-homepage-hero@2x.jpg")
       center/cover no-repeat;
-    @include media("phone") {
-      height: 60rem;
-    }
   }
   &__content {
     position: absolute;
@@ -29,6 +32,7 @@
     left: 0;
     background-color: $color-secondary-light-grey;
     width: 45rem;
+    border: 1px solid $color-secondary-grey;
     @include media("phone") {
       position: relative;
       width: 100%;
@@ -47,7 +51,14 @@
       margin: 5.5rem 0 4rem;
     }
     @include media("phone") {
-      margin: 3.5rem 0 4rem;
+      margin: 3.5rem auto 4rem;
+      text-align: center;
+    }
+  }
+  &__action {
+    display: flex;
+    @include media("phone") {
+      justify-content: center;
     }
   }
 }
