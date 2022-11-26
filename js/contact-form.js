@@ -69,6 +69,7 @@ const validateEmail = function (email) {
   );
 
   if (!emailRegex.test(email)) {
+    inputEmail.classList.add("invalid");
     setValidationText("email", "Entered email is invalid");
     showValidationText("email");
     return false;
