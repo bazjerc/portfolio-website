@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link href="../../index.css" rel="stylesheet" />
+    <script src="./portfolio-detail.js" type="module"></script>
   </head>
   <body>
     <header class="header">
@@ -15,13 +16,34 @@
           src="../../assets/icons/logo-dark.svg"
           alt="Main logo"
         />
-        <nav>
-          <ul class="nav">
-            <li class="nav__item"><a href="#">Home</a></li>
+        <nav class="nav">
+          <ul>
+            <li class="nav__item selected"><a href="#">Home</a></li>
             <li class="nav__item"><a href="#">Portfolio</a></li>
             <li class="nav__item"><a href="#">Contact Me</a></li>
           </ul>
         </nav>
+        <div class="nav-phone">
+          <div class="nav-phone__control">
+            <button
+              class="nav-phone__control-btn nav-phone__control-btn--open"
+            >
+              <img src="../../assets/icons/hamburger.svg" alt="" />
+            </button>
+            <button
+              class="nav-phone__control-btn nav-phone__control-btn--close"
+            >
+              <img src="../../assets/icons/close.svg" alt="" />
+            </button>
+          </div>
+          <nav class="nav-phone__wrapper">
+            <ul>
+              <li class="nav-phone__item selected"><a href="#">Home</a></li>
+              <li class="nav-phone__item"><a href="#">Portfolio</a></li>
+              <li class="nav-phone__item"><a href="#">Contact Me</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
     <main>
@@ -117,8 +139,8 @@
             src="../../assets/icons/logo-light.svg"
             alt="Main logo"
           />
-          <nav>
-            <ul class="nav">
+          <nav class="nav">
+            <ul>
               <li class="nav__item"><a href="#">Home</a></li>
               <li class="nav__item"><a href="#">Portfolio</a></li>
               <li class="nav__item"><a href="#">Contact me</a></li>

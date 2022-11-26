@@ -20,4 +20,10 @@
   &__logo {
     height: 3.2rem;
   }
+
+  .nav {
+    @include media("phone") {
+      display: none;
+    }
+  }
 }

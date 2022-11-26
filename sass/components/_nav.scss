@@ -1,8 +1,10 @@
 @use "../abstracts/" as *;
 
 .nav {
-  display: flex;
-  align-items: center;
+  ul {
+    display: flex;
+    align-items: center;
+  }
   &__item {
     text-transform: uppercase;
     font-size: 1.2rem;
@@ -20,6 +22,10 @@
 }
 
 .nav-phone {
+  display: none;
+  @include media("phone") {
+    display: block;
+  }
   &__item {
     text-transform: uppercase;
     font-size: 1.2rem;
@@ -29,6 +35,7 @@
     }
   }
   &__wrapper {
+    display: none;
     position: absolute;
     right: 0;
     top: calc(100% + 2rem);
@@ -47,7 +54,22 @@
     display: flex;
     align-items: center;
   }
-  &__control-icon {
+  &__control-btn {
     cursor: pointer;
+    img {
+      display: block;
+    }
+    &--open {
+      display: block;
+    }
+    &--close {
+      display: none;
+    }
+  }
+}
+
+.nav-phone {
+  &__item.selected {
+    color: $color-primary-cyan;
   }
 }
