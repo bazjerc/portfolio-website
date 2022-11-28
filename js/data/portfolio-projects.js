@@ -13,7 +13,7 @@ const projectsData = [
     figure: {
       thumb: "image-portfolio-manage@2x.jpg",
       hero: "image-manage-hero@2x.jpg",
-      preview: ["image-manage-preview-1@2x", "image-manage-preview-2@2x"],
+      preview: ["image-manage-preview-1@2x.jpg", "image-manage-preview-2@2x.jpg"],
     },
     url: "#",
   },
@@ -31,7 +31,7 @@ const projectsData = [
     figure: {
       thumb: "image-portfolio-manage@2x.jpg",
       hero: "image-manage-hero@2x.jpg",
-      preview: ["image-manage-preview-1@2x", "image-manage-preview-2@2x"],
+      preview: ["image-manage-preview-1@2x.jpg", "image-manage-preview-2@2x.jpg"],
     },
     url: "#",
   },

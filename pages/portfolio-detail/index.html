@@ -25,9 +25,7 @@
         </nav>
         <div class="nav-phone">
           <div class="nav-phone__control">
-            <button
-              class="nav-phone__control-btn nav-phone__control-btn--open"
-            >
+            <button class="nav-phone__control-btn nav-phone__control-btn--open">
               <img src="../../assets/icons/hamburger.svg" alt="" />
             </button>
             <button
@@ -48,81 +46,62 @@
     </header>
     <main>
       <div class="container--portfolio-detail-main">
-        <div class="project-hero"></div>
-        <div class="container-project-content">
-          <section class="project-summary">
-            <h1 class="project-summary__title">Manage</h1>
-            <p class="project-summary__text">
-              This project required me to build a fully responsive landing page
-              to the designs provided. I used HTML5, along with CSS Grid and
-              JavaScript for the areas that required interactivity, such as the
-              testimonial slider.
-            </p>
-            <div class="project-summary__keywords">
-              <p>Interaction Design / Front End Development</p>
-              <p>HTML / CSS / JS</p>
+        <div class="content-wrapper">
+          <div class="project-hero"></div>
+          <div class="project-data-wrapper">
+            <section class="project-summary">
+              <h1 class="project-summary__title"></h1>
+              <p class="project-summary__text"></p>
+              <div class="project-summary__keywords"></div>
+              <div class="project-summary__action"></div>
+            </section>
+            <section class="project-background">
+              <h2 class="project-background__heading">Project Background</h2>
+              <p class="project-background__text"></p>
+              <h2 class="project-background__heading">Static Previews</h2>
+              <div class="project-background__preview"></div>
+            </section>
+          </div>
+          <div class="navigation">
+            <div class="navigation__tile navigation__tile--left">
+              <a href="#">
+                <button class="navigation__btn navigation__btn--left">
+                  <img
+                    class="navigation__btn-icon navigation__btn-icon--left"
+                    src="../../assets/icons/arrow-left.svg"
+                    alt=""
+                  />
+                  <div class="navigation__btn-text">
+                    <h3></h3>
+                    <p>Previous Project</p>
+                  </div>
+                </button>
+              </a>
             </div>
-            <div class="project-summary__action">
-              <button class="btn">Visit website</button>
+            <div class="navigation__separator-line"></div>
+            <div class="navigation__tile navigation__tile--right">
+              <a href="#">
+                <button class="navigation__btn navigation__btn--right">
+                  <img
+                    class="navigation__btn-icon navigation__btn-icon--right"
+                    src="../../assets/icons/arrow-right.svg"
+                    alt=""
+                  />
+                  <div class="navigation__btn-text">
+                    <h3></h3>
+                    <p>Next Project</p>
+                  </div>
+                </button>
+              </a>
             </div>
-          </section>
-          <section class="project-background">
-            <h2 class="project-background__heading">Project Background</h2>
-            <p class="project-background__text">
-              This project was a front-end challenge from Frontend Mentor. It’s
-              a platform that enables you to practice building websites to a
-              design and project brief. Each challenge includes mobile and
-              desktop designs to show how the website should look at different
-              screen sizes. Creating these projects has helped me refine my
-              workflow and solve real-world coding problems. I’ve learned
-              something new with each project, helping me to improve and adapt
-              my style.
-            </p>
-            <h2 class="project-background__heading">Static Previews</h2>
-            <div class="project-background__preview">
-              <div class="project-background__preview-img">
-                <img
-                  src="../../assets/images/portfolio-detail/image-manage-preview-1@2x.jpg"
-                  alt="Project preview"
-                />
-              </div>
-              <div class="project-background__preview-img">
-                <img
-                  src="../../assets/images/portfolio-detail/image-manage-preview-2@2x.jpg"
-                  alt="Portfolio preview"
-                />
-              </div>
-            </div>
-          </section>
+          </div>
         </div>
-        <div class="navigation">
-          <div class="navigation__tile navigation__tile--left">
-            <button class="navigation__btn navigation__btn--left">
-              <img
-                class="navigation__btn-icon navigation__btn-icon--left"
-                src="../../assets/icons/arrow-left.svg"
-                alt=""
-              />
-              <div class="navigation__btn-text">
-                <h3>Fylo</h3>
-                <p>Previous Project</p>
-              </div>
-            </button>
-          </div>
-          <div class="navigation__separator-line"></div>
-          <div class="navigation__tile navigation__tile--right">
-            <button class="navigation__btn navigation__btn--right">
-              <img
-                class="navigation__btn-icon navigation__btn-icon--right"
-                src="../../assets/icons/arrow-right.svg"
-                alt=""
-              />
-              <div class="navigation__btn-text">
-                <h3>Bookmark</h3>
-                <p>Next Project</p>
-              </div>
-            </button>
-          </div>
+        <div class="error-message">
+          <h1 class="error-message__header">
+            I have not done this project
+            <span class="error-message__emoji">:(</span>
+          </h1>
+          <button class="btn">Go back to portfolio</button>
         </div>
         <aside class="cta">
           <p class="cta__subject">Interested in doing a project together?</p>

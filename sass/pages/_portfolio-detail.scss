@@ -5,28 +5,33 @@
   display: flex;
   flex-direction: column;
   padding-top: 3rem;
+  width: 100%;
   @include media("phone") {
     padding-top: initial;
   }
 }
 
-.container-project-content {
+.project-hero {
+  height: 50rem;
+  margin-bottom: 10rem;
+  @include media("tablet") {
+    margin-bottom: 4rem;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+}
+
+.project-data-wrapper {
   display: flex;
   justify-content: space-between;
   margin-bottom: 7rem;
   align-items: flex-start;
   @include media("tablet") {
     flex-direction: column;
-  }
-}
-
-.project-hero {
-  background: url("../../assets/images/portfolio-detail/image-manage-hero@2x.jpg")
-    top/cover no-repeat;
-  height: 50rem;
-  margin-bottom: 10rem;
-  @include media("tablet") {
-    margin-bottom: 4rem;
   }
 }
 
