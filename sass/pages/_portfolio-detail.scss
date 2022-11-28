@@ -4,18 +4,18 @@
   @extend %container;
   display: flex;
   flex-direction: column;
-  padding-top: 3rem;
   width: 100%;
-  @include media("phone") {
-    padding-top: initial;
-  }
 }
 
 .project-hero {
   height: 50rem;
+  margin-top: 3rem;
   margin-bottom: 10rem;
   @include media("tablet") {
     margin-bottom: 4rem;
+  }
+  @include media("phone") {
+    margin-top: initial;
   }
   img {
     width: 100%;
