@@ -19,6 +19,10 @@
   &__item.selected {
     color: $color-primary-cyan;
   }
+  &__item.minified {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
 }
 
 .nav-phone {
@@ -71,5 +75,9 @@
 .nav-phone {
   &__item.selected {
     color: $color-primary-cyan;
+  }
+  &__item.minified {
+    opacity: 0.5;
+    transform: scale(0.95);
   }
 }
