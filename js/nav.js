@@ -9,7 +9,7 @@ const btnClosePhoneNav = document.querySelector(
 
 const phoneMediaQuery = window.matchMedia("(max-width: 576px)");
 
-// Phone nav open and close logic
+// Phone-nav open and close logic
 
 const openPhoneNav = function () {
   phoneNav.style.display = "block";

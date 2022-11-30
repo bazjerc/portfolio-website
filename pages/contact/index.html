@@ -18,16 +18,14 @@
         />
         <nav class="nav">
           <ul>
-            <li class="nav__item selected"><a href="#">Home</a></li>
+            <li class="nav__item"><a href="#">Home</a></li>
             <li class="nav__item"><a href="#">Portfolio</a></li>
-            <li class="nav__item"><a href="#">Contact Me</a></li>
+            <li class="nav__item selected"><a href="#">Contact Me</a></li>
           </ul>
         </nav>
         <div class="nav-phone">
           <div class="nav-phone__control">
-            <button
-              class="nav-phone__control-btn nav-phone__control-btn--open"
-            >
+            <button class="nav-phone__control-btn nav-phone__control-btn--open">
               <img src="../../assets/icons/hamburger.svg" alt="" />
             </button>
             <button
@@ -38,9 +36,11 @@
           </div>
           <nav class="nav-phone__wrapper">
             <ul>
-              <li class="nav-phone__item selected"><a href="#">Home</a></li>
+              <li class="nav-phone__item"><a href="#">Home</a></li>
               <li class="nav-phone__item"><a href="#">Portfolio</a></li>
-              <li class="nav-phone__item"><a href="#">Contact Me</a></li>
+              <li class="nav-phone__item selected">
+                <a href="#">Contact Me</a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -62,13 +62,7 @@
               check out my online profiles below and get in touch using the
               form.
             </p>
-            <div class="social">
-              <img
-                class="social__icon"
-                src="../../assets/icons/github-dark.svg"
-                alt="Github link"
-              />
-            </div>
+            <div class="social" data-accent="dark"></div>
           </div>
         </section>
         <section class="contact-section">
@@ -113,17 +107,11 @@
             <ul>
               <li class="nav__item"><a href="#">Home</a></li>
               <li class="nav__item"><a href="#">Portfolio</a></li>
-              <li class="nav__item"><a href="#">Contact me</a></li>
+              <li class="nav__item selected"><a href="#">Contact me</a></li>
             </ul>
           </nav>
         </div>
-        <div class="social">
-          <img
-            class="social__icon"
-            src="../../assets/icons/github-light.svg"
-            alt="Github link"
-          />
-        </div>
+        <div class="social" data-accent="light"></div>
       </div>
     </footer>
   </body>

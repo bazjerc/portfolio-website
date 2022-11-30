@@ -1,4 +1,5 @@
 import "../../js/nav.js";
+import "../../js/social.js"
 
 import { projectsData } from "../../js/data/portfolio-projects.js";
 
