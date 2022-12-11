@@ -113,9 +113,9 @@ $nav-item-animation-curve: cubic-bezier(0, 0.28, 0, 0.55);
   }
   &__wrapper {
     transform-origin: top right;
-    animation: shrink 0.2s linear;
+    animation: shrink 0.2s ease-out;
   }
   &__wrapper.expand {
-    animation: expand 0.2s linear;
+    animation: expand 0.2s ease-out;
   }
 }
