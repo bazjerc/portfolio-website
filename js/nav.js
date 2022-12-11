@@ -12,13 +12,29 @@ const phoneMediaQuery = window.matchMedia("(max-width: 576px)");
 // Phone-nav open and close logic
 
 const openPhoneNav = function () {
-  phoneNav.style.display = "block";
+  const animEndEvent = new Event("animationend");
+  phoneNav.dispatchEvent(animEndEvent);
+  phoneNav.style.visibility = "visible";
+  phoneNav.classList.add("expand");
   btnOpenPhoneNav.style.display = "none";
   btnClosePhoneNav.style.display = "block";
 };
 
-const closePhoneNav = function () {
-  phoneNav.style.display = "none";
+const closePhoneNav = function (timing) {
+  phoneNav.classList.remove("expand");
+  if (timing === "instant") {
+    const animEndEvent = new Event("animationend");
+    phoneNav.dispatchEvent(animEndEvent);
+    phoneNav.style.visibility = "hidden";
+  } else {
+    phoneNav.addEventListener(
+      "animationend",
+      () => {
+        phoneNav.style.visibility = "hidden";
+      },
+      { once: true }
+    );
+  }
   btnOpenPhoneNav.style.display = "block";
   btnClosePhoneNav.style.display = "none";
 };
@@ -62,7 +78,7 @@ btnClosePhoneNav.addEventListener("click", closePhoneNav);
 
 phoneMediaQuery.addEventListener("change", (e) => {
   if (!e.matches) {
-    closePhoneNav();
+    closePhoneNav("instant");
   }
 });
 

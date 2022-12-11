@@ -1,5 +1,7 @@
 @use "../abstracts/" as *;
 
+$nav-item-animation-curve: cubic-bezier(0, 0.28, 0, 0.55);
+
 .nav {
   ul {
     display: flex;
@@ -16,6 +18,10 @@
 }
 
 .nav {
+  &__item {
+    transition: transform 0.07s $nav-item-animation-curve,
+      opacity 0.07s $nav-item-animation-curve;
+  }
   &__item.selected {
     color: $color-primary-cyan;
   }
@@ -39,7 +45,7 @@
     }
   }
   &__wrapper {
-    display: none;
+    visibility: hidden;
     position: absolute;
     right: 0;
     top: calc(100% + 2rem);
@@ -68,16 +74,48 @@
     }
     &--close {
       display: none;
+      margin-right: 0.3rem;
     }
   }
 }
 
+// Phone nav animations
+
+@keyframes expand {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shrink {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
 .nav-phone {
+  &__item {
+    transition: transform 0.07s $nav-item-animation-curve,
+      opacity 0.07s $nav-item-animation-curve;
+  }
   &__item.selected {
     color: $color-primary-cyan;
   }
   &__item.minified {
     opacity: 0.5;
     transform: scale(0.95);
+  }
+  &__wrapper {
+    transform-origin: top right;
+    animation: shrink 0.2s linear;
+  }
+  &__wrapper.expand {
+    animation: expand 0.2s linear;
   }
 }
