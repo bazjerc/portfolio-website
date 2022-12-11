@@ -34,8 +34,17 @@
     font-style: italic;
     font-weight: 700;
   }
+  &__footer {
+    display: flex;
+    align-items: center;
+  }
   &__submit-btn {
-    margin-top: 3rem;
+    margin-right: 3rem;
+  }
+  &__submit-text {
+    display: none;
+    color: $color-primary-cyan;
+    text-align: center;
   }
 }
 
@@ -56,5 +65,10 @@
   }
   &__submit-btn:focus {
     background-color: $color-primary-cyan;
+  }
+  &__submit-text {
+    &.invalid {
+      color: rgb(244, 48, 48);
+    }
   }
 }

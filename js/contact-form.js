@@ -4,7 +4,8 @@ const contactForm = document.forms.contactForm;
 const inputName = contactForm.elements.name;
 const inputEmail = contactForm.elements.email;
 const inputMessage = contactForm.elements.message;
-const formSubmitBtn = contactForm.querySelector("[type=submit]");
+const formSubmitBtn = contactForm.querySelector(".contact-form__submit-btn");
+const submitText = contactForm.querySelector(".contact-form__submit-text");
 
 // Validation message control
 
@@ -27,6 +28,23 @@ const hideValidationText = function (input) {
     `#${input} + .contact-form__validation-text`
   );
   validationText.style.display = "none";
+};
+
+const showSubmitText = function (valid) {
+  if (valid) {
+    submitText.style.display = "block";
+    submitText.textContent = "Thank you for your message!";
+  } else {
+    submitText.style.display = "block";
+    submitText.classList.add("invalid");
+    submitText.innerHTML = "Something went wrong.<br>Please try again.";
+  }
+};
+
+const hideSubmitText = function () {
+  submitText.style.display = "none";
+  submitText.classList.remove("invalid");
+  submitText.textContent = "";
 };
 
 // Field validation logic
@@ -133,6 +151,9 @@ const resetForm = function () {
 const submitForm = async function (e) {
   e.preventDefault();
 
+  hideSubmitText();
+  formSubmitBtn.blur();
+
   const name = inputName.value;
   const email = inputEmail.value;
   const message = inputMessage.value;
@@ -147,12 +168,17 @@ const submitForm = async function (e) {
 
   const formData = new FormData(contactForm);
 
+  formSubmitBtn.setAttribute("disabled", true);
   const resStatus = await sendFormData(formData);
-  
+
   if (resStatus === 200) {
     resetForm();
-    formSubmitBtn.blur();
+    showSubmitText(true);
+    setTimeout(() => hideSubmitText(), 4000);
+  } else {
+    showSubmitText(false);
   }
+  formSubmitBtn.removeAttribute("disabled");
 };
 
 contactForm.addEventListener("submit", submitForm);
