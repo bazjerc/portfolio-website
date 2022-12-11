@@ -30,21 +30,37 @@ const hideValidationText = function (input) {
   validationText.style.display = "none";
 };
 
-const showSubmitText = function (valid) {
-  if (valid) {
-    submitText.style.display = "block";
+const showSubmitText = function (type = "valid") {
+  console.log("show");
+  if (type === "valid") {
     submitText.textContent = "Thank you for your message!";
+    submitText.style.visibility = "visible";
+    submitText.style.opacity = "1";
   } else {
-    submitText.style.display = "block";
-    submitText.classList.add("invalid");
     submitText.innerHTML = "Something went wrong.<br>Please try again.";
+    submitText.classList.add("invalid");
+    submitText.style.visibility = "visible";
+    submitText.style.opacity = "1";
   }
 };
 
-const hideSubmitText = function () {
-  submitText.style.display = "none";
-  submitText.classList.remove("invalid");
-  submitText.textContent = "";
+const hideSubmitText = function (behaviour) {
+  console.log("hide");
+  if (behaviour === "instant") {
+    submitText.style.opacity = "0";
+    submitText.style.visibility = "hidden";
+  } else {
+    submitText.style.opacity = "0";
+    submitText.addEventListener(
+      "transitionend",
+      () => {
+        submitText.style.visibility = "hidden";
+        submitText.classList.remove("invalid");
+        submitText.textContent = "";
+      },
+      { once: true }
+    );
+  }
 };
 
 // Field validation logic
@@ -148,10 +164,13 @@ const resetForm = function () {
   inputMessage.value = "";
 };
 
+let hideSubmitTextTimer;
+
 const submitForm = async function (e) {
   e.preventDefault();
 
-  hideSubmitText();
+  hideSubmitText("instant");
+  clearTimeout(hideSubmitTextTimer);
   formSubmitBtn.blur();
 
   const name = inputName.value;
@@ -169,15 +188,21 @@ const submitForm = async function (e) {
   const formData = new FormData(contactForm);
 
   formSubmitBtn.setAttribute("disabled", true);
+
   const resStatus = await sendFormData(formData);
+
+  await new Promise((resolve) => {
+    setTimeout(() => resolve(), 1000);
+  });
 
   if (resStatus === 200) {
     resetForm();
-    showSubmitText(true);
-    setTimeout(() => hideSubmitText(), 4000);
+    showSubmitText();
+    hideSubmitTextTimer = setTimeout(() => hideSubmitText(), 5000);
   } else {
-    showSubmitText(false);
+    showSubmitText("invalid");
   }
+
   formSubmitBtn.removeAttribute("disabled");
 };
 
