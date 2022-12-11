@@ -4,6 +4,7 @@ const contactForm = document.forms.contactForm;
 const inputName = contactForm.elements.name;
 const inputEmail = contactForm.elements.email;
 const inputMessage = contactForm.elements.message;
+const formSubmitBtn = contactForm.querySelector("[type=submit]");
 
 // Validation message control
 
@@ -109,13 +110,27 @@ const validateMessage = function (message) {
 
 // Form control
 
+const sendFormData = function (formData) {
+  const reqOptions = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formData),
+  };
+
+  const res = fetch("https://formbold.com/s/60vM3", reqOptions);
+
+  return res.then((res) => res.status);
+};
+
 const resetForm = function () {
   inputName.value = "";
   inputEmail.value = "";
   inputMessage.value = "";
 };
 
-const submitForm = function (e) {
+const submitForm = async function (e) {
   e.preventDefault();
 
   const name = inputName.value;
@@ -130,14 +145,14 @@ const submitForm = function (e) {
 
   if (!isFormValid) return;
 
-  const formData = {
-    name,
-    email,
-    message,
-  };
+  const formData = new FormData(contactForm);
 
-  resetForm();
-  this.querySelector(".contact-form__submit-btn").blur();
+  const resStatus = await sendFormData(formData);
+  
+  if (resStatus === 200) {
+    resetForm();
+    formSubmitBtn.blur();
+  }
 };
 
 contactForm.addEventListener("submit", submitForm);
