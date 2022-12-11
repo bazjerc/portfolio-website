@@ -79,3 +79,29 @@
     background-color: $color-secondary-grey;
   }
 }
+
+.navigation {
+  &__btn-icon {
+    transition: transform 0.1s ease-out;
+  }
+  &__btn:hover & {
+    &__btn-icon {
+      &--left {
+        transform: translateX(0.5rem);
+      }
+      &--right {
+        transform: translateX(-0.5rem);
+      }
+    }
+  }
+  &__btn:active & {
+    &__btn-icon {
+      &--left {
+        transform: translateX(0);
+      }
+      &--right {
+        transform: translateX(0);
+      }
+    }
+  }
+}
