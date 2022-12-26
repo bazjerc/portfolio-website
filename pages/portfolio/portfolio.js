@@ -47,11 +47,32 @@ const populatePage = function (projectsData) {
   });
 };
 
+// Project thumbnail scale animation
+
+const scaleProjectThumbnail = function (e) {
+  if (!e.target.classList.contains("btn")) return;
+  const projectThumbnail = e.target
+    .closest(".card")
+    .querySelector(".card__figure img");
+  projectThumbnail.classList.add("scaled");
+  e.target.addEventListener(
+    "mouseout",
+    function () {
+      projectThumbnail.classList.remove("scaled");
+    },
+    { once: true }
+  );
+};
+
 // Page init
 
 (function () {
   populatePage(projectsData);
 })();
+
+// Event listeners
+
+projectsContainer.addEventListener("mouseover", scaleProjectThumbnail);
 
 // Markup
 // project card
