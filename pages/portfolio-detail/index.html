@@ -7,6 +7,7 @@
     <title>Portfolio</title>
     <link href="../../index.css" rel="stylesheet" />
     <script src="./portfolio-detail.js" type="module"></script>
+    <script src="../../js/carousel.js" type="module"></script>
   </head>
   <body>
     <header class="header">
@@ -52,19 +53,17 @@
       <div class="container--portfolio-detail-main">
         <div class="content-wrapper">
           <div class="project-hero"></div>
-          <div class="carousel">
+          <div class="carousel" id="carousel">
             <div class="carousel__btn carousel__btn--left">
               <img src="../../assets/icons/arrow-left.svg" alt="" />
             </div>
             <div class="carousel__btn carousel__btn--right">
               <img src="../../assets/icons/arrow-right.svg" alt="" />
             </div>
-            <div class="carousel__indicator">
-              <div class="carousel__dot"></div>
-              <div class="carousel__dot"></div>
-              <div class="carousel__dot"></div>
-            </div>
+            <div class="carousel__indicator"></div>
             <div class="carousel__content">
+              <div class="carousel__item carousel__item1"></div>
+              <div class="carousel__item carousel__item2"></div>
               <div class="carousel__item carousel__item1"></div>
               <div class="carousel__item carousel__item2"></div>
             </div>
