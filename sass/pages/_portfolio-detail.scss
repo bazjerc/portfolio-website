@@ -5,6 +5,13 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  min-height: calc(100vh - 23rem);
+  @include media("tablet") {
+    min-height: calc(100vh - 19rem);
+  }
+  @include media("phone") {
+    min-height: initial;
+  }
 }
 
 .project-hero {
