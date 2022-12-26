@@ -1,47 +1,74 @@
-// Elements
-
-const carouselLeftButton = document.querySelector(".carousel__btn--left");
-const carouselRightButton = document.querySelector(".carousel__btn--right");
-
-// const moveCarouselSlide = function(e) {
-
-// }
+// Carousel logic
 
 const initializeCarousel = function (carouselId) {
   const carousel = document.getElementById(carouselId);
-  const carouselButtons = carousel.querySelectorAll(".carousel__btn");
-  console.log(carouselButtons);
   const carouselItems = carousel.querySelectorAll(".carousel__item");
+  const carouselButtons = carousel.querySelectorAll(".carousel__btn");
   const carouselIndicator = carousel.querySelector(".carousel__indicator");
-  const carouselDots = carouselIndicator.childNodes;
-  carouselItems.forEach((item, i) => {
+  carouselItems.forEach((_, i) => {
     const carouselDot = document.createElement("div");
-    carouselDot.className = `carousel__dot ${i === 0 ? "selected" : ""}`;
-    item.style.transform = `translateX(${i * 100}%)`;
+    carouselDot.className = "carousel__dot";
+    carouselDot.dataset.item = i;
     carouselIndicator.appendChild(carouselDot);
   });
 
-  let currSlideIdx = 0;
-  const numOfSlides = carouselItems.length;
-  const moveCarouselSlide = function (e) {
-    if (e.target.classList.contains("carousel__btn--left")) currSlideIdx--;
-    if (e.target.classList.contains("carousel__btn--right")) currSlideIdx++;
-    if (currSlideIdx === -1) currSlideIdx = numOfSlides - 1;
-    if (currSlideIdx === numOfSlides) currSlideIdx = 0;
-    console.log(currSlideIdx);
+  let currItemIndex = 0;
+  const maxItemIndex = carouselItems.length - 1;
 
+  const goToItem = function (itemIndex) {
     carouselItems.forEach((item, i) => {
-      item.style.transform = `translateX(${(i - currSlideIdx) * 100}%)`;
-    });
-    carouselDots.forEach((dot, i) => {
-      dot.classList.remove("selected");
-      if (currSlideIdx === i) dot.classList.add("selected");
+      item.style.transform = `translateX(${(i - itemIndex) * 100}%)`;
     });
   };
 
-  carouselButtons.forEach((btn) =>
-    btn.addEventListener("click", moveCarouselSlide)
-  );
+  const selectDot = function (itemIndex) {
+    const carouselDots = carouselIndicator.querySelectorAll(".carousel__dot");
+    carouselDots.forEach((dot, i) => {
+      dot.classList.remove("selected");
+      if (itemIndex === i) dot.classList.add("selected");
+    });
+  };
+
+  const prevItem = function () {
+    if (currItemIndex === 0) {
+      currItemIndex = maxItemIndex;
+    } else {
+      currItemIndex--;
+    }
+    goToItem(currItemIndex);
+    selectDot(currItemIndex);
+  };
+
+  const nextItem = function () {
+    if (currItemIndex === maxItemIndex) {
+      currItemIndex = 0;
+    } else {
+      currItemIndex++;
+    }
+    goToItem(currItemIndex);
+    selectDot(currItemIndex);
+  };
+
+  const changeItem = function (e) {
+    if (e.target.classList.contains("carousel__btn--left")) prevItem();
+    if (e.target.classList.contains("carousel__btn--right")) nextItem();
+  };
+
+  const selectItem = function (e) {
+    if (!e.target.classList.contains("carousel__dot")) return;
+    const selectedItem = Number(e.target.dataset.item);
+    goToItem(selectedItem);
+    selectDot(selectedItem);
+  };
+
+  goToItem(currItemIndex);
+  selectDot(currItemIndex);
+
+  carouselButtons.forEach((btn) => btn.addEventListener("click", changeItem));
+
+  carouselIndicator.addEventListener("click", selectItem);
 };
 
 initializeCarousel("carousel");
+
+export default initializeCarousel;
