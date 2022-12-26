@@ -3,7 +3,7 @@
 .navigation {
   display: flex;
   border-width: 1px 0 1px 0;
-  border-color: $color-secondary-grey;
+  border-color: $color-grey;
   border-style: solid;
   &__tile {
     padding: 3rem 0;
@@ -48,7 +48,7 @@
     }
     p {
       font-size: 1.6rem;
-      color: $color-secondary-grey;
+      color: $color-dark-grey;
     }
   }
   &__btn-icon {
@@ -76,7 +76,7 @@
   &__separator-line {
     justify-self: center;
     width: 1px;
-    background-color: $color-secondary-grey;
+    background-color: $color-grey;
   }
 }
 

@@ -17,8 +17,8 @@
   justify-content: center;
   align-items: center;
   height: 8rem;
-  background-color: $color-primary-grayish-blue;
-  color: $color-secondary-light-grey;
+  background-color: $color-grayish-blue;
+  color: $color-light-grey;
   @include media("phone") {
     height: auto;
   }

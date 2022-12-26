@@ -5,12 +5,13 @@ $font-body: "Public Sans", sans-serif;
 
 // Color variables
 
-$color-primary-cyan: rgb(95, 180, 162);
-$color-primary-blue: rgb(32, 58, 76);
-$color-primary-grayish-blue: rgb(51, 50, 61);
-$color-secondary-light-grey: rgb(250, 250, 250);
-$color-secondary-grey: rgb(234, 234, 235);
-$color-secondary-red: rgb(244, 48, 48);
+$color-cyan: rgb(95, 180, 162);
+$color-blue: rgb(32, 58, 76);
+$color-grayish-blue: rgb(51, 50, 61);
+$color-light-grey: rgb(250, 250, 250);
+$color-grey: rgb(234, 234, 235);
+$color-red: rgb(244, 48, 48);
+$color-dark-grey: rgb(192, 192, 192);
 
 // Breakpoints 
 
@@ -22,10 +23,10 @@ $breakpoints: (
 
 /* // Theme variables
 :root {
-  --color-background: #{$color-primary-cyan};
+  --color-background: #{$color-cyan};
 }
 
 .dark {
-  --color-background: #{$color-primary-blue};
+  --color-background: #{$color-blue};
 }
  */

@@ -30,9 +30,9 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: $color-secondary-light-grey;
+    background-color: $color-light-grey;
     width: 45rem;
-    border: 1px solid $color-secondary-grey;
+    border: 1px solid $color-grey;
     @include media("phone") {
       position: relative;
       width: 100%;

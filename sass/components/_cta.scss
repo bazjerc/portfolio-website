@@ -27,7 +27,7 @@
     flex-grow: 1;
     height: 1px;
     margin: 0 4rem;
-    background-color: $color-secondary-grey;
+    background-color: $color-grey;
     @include media("phone") {
       display: none;
     }

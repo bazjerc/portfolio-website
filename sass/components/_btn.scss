@@ -8,55 +8,55 @@
   letter-spacing: 0.2rem;
   padding: 1.7rem 3.5rem;
   cursor: pointer;
-  border: 1px solid $color-primary-grayish-blue;
+  border: 1px solid $color-grayish-blue;
   white-space: nowrap;
-  color: $color-primary-grayish-blue;
+  color: $color-grayish-blue;
   &--full {
-    color: $color-secondary-light-grey;
-    background-color: $color-primary-blue;
-    border: 1px solid $color-primary-blue;
+    color: $color-light-grey;
+    background-color: $color-blue;
+    border: 1px solid $color-blue;
   }
 }
 
 .btn {
   transition: background-color 0.07s, color 0.07s, transform 0.07s;
   &:hover {
-    background-color: $color-primary-grayish-blue;
-    color: $color-secondary-light-grey;
+    background-color: $color-grayish-blue;
+    color: $color-light-grey;
   }
   &:active {
     transform: scale(0.98);
   }
   &:disabled {
-    color: $color-secondary-grey;
+    color: $color-grey;
     cursor: default;
     background-color: transparent;
-    border: 1px solid $color-secondary-grey;
+    border: 1px solid $color-grey;
     transform: none;
   }
   &--full:hover {
-    border: 1px solid $color-primary-cyan;
-    background-color: $color-primary-cyan;
+    border: 1px solid $color-cyan;
+    background-color: $color-cyan;
   }
   &--full:disabled {
-    border: 1px solid $color-secondary-grey;
+    border: 1px solid $color-grey;
   }
   &--full:disabled:hover {
     background-color: transparent;
-    border: 1px solid $color-secondary-grey;
+    border: 1px solid $color-grey;
   }
 }
 
 .icn-btn {
   display: flex;
   align-items: stretch;
-  color: $color-secondary-light-grey;
-  background-color: $color-primary-blue;
+  color: $color-light-grey;
+  background-color: $color-blue;
   cursor: pointer;
   &__icon-wrapper {
     display: flex;
     align-items: center;
-    background-color: color.scale($color-primary-blue, $lightness: -10%);
+    background-color: color.scale($color-blue, $lightness: -10%);
     padding: 0 1.6rem;
   }
   &__icon {
@@ -85,11 +85,11 @@
     transition: background-color 0.07s;
   }
   &:hover {
-    background-color: $color-primary-cyan;
+    background-color: $color-cyan;
   }
   &:hover & {
     &__icon-wrapper {
-      background-color: color.scale($color-primary-cyan, $lightness: -10%);
+      background-color: color.scale($color-cyan, $lightness: -10%);
     }
     &__icon {
       &--dark {

@@ -23,7 +23,7 @@ $nav-item-animation-curve: cubic-bezier(0, 0.28, 0, 0.55);
       opacity 0.07s $nav-item-animation-curve;
   }
   &__item.selected {
-    color: $color-primary-cyan;
+    color: $color-cyan;
   }
   &__item.minified {
     opacity: 0.5;
@@ -56,8 +56,8 @@ $nav-item-animation-curve: cubic-bezier(0, 0.28, 0, 0.55);
       align-items: center;
       width: 22rem;
       padding: 3.5rem 2rem;
-      background-color: $color-primary-grayish-blue;
-      color: $color-secondary-light-grey;
+      background-color: $color-grayish-blue;
+      color: $color-light-grey;
     }
   }
   &__control {
@@ -105,7 +105,7 @@ $nav-item-animation-curve: cubic-bezier(0, 0.28, 0, 0.55);
       opacity 0.07s $nav-item-animation-curve;
   }
   &__item.selected {
-    color: $color-primary-cyan;
+    color: $color-cyan;
   }
   &__item.minified {
     opacity: 0.5;

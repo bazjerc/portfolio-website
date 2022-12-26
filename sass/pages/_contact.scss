@@ -11,7 +11,7 @@
   align-items: flex-start;
   padding: 4rem 0;
   border-width: 1px 0 0 0;
-  border-color: $color-secondary-grey;
+  border-color: $color-grey;
   border-style: solid;
   @include media("tablet") {
     flex-direction: column;

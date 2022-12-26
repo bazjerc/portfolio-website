@@ -44,7 +44,7 @@
   &__submit-text {
     visibility: hidden;
     opacity: 0;
-    color: $color-primary-cyan;
+    color: $color-cyan;
     text-align: center;
   }
 }
@@ -52,20 +52,20 @@
 .contact-form {
   &__field {
     input:focus {
-      border-color: $color-primary-cyan;
+      border-color: $color-cyan;
     }
     input.invalid {
       border-color: rgb(244, 48, 48);
     }
     textarea:focus {
-      border-color: $color-primary-cyan;
+      border-color: $color-cyan;
     }
     textarea.invalid {
       border-color: rgb(244, 48, 48);
     }
   }
   &__submit-btn:focus {
-    background-color: $color-primary-cyan;
+    background-color: $color-cyan;
   }
   &__submit-text {
     transition: opacity 0.1s ease-out;
