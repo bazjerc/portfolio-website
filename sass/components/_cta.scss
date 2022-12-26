@@ -31,5 +31,8 @@
     @include media("phone") {
       display: none;
     }
+    @include media-max(620px) {
+      margin: 0 2rem;
+    }
   }
 }
