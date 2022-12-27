@@ -69,6 +69,4 @@ const initializeCarousel = function (carouselId) {
   carouselIndicator.addEventListener("click", selectItem);
 };
 
-initializeCarousel("carousel");
-
 export default initializeCarousel;

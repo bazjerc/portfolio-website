@@ -88,15 +88,17 @@
     @extend %paragraph;
     margin-bottom: 2.5rem;
   }
-  &__preview-img {
-    &:not(:last-child) {
-      margin-bottom: 3rem;
-    }
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
+  .carousel {
+    height: 25vw;
+    min-height: 35rem;
+    max-height: 50rem;
+    &__content {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+      }
     }
   }
 }

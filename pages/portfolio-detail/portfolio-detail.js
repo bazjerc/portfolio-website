@@ -1,5 +1,7 @@
 import "../../js/nav.js";
-import "../../js/social.js"
+import "../../js/social.js";
+
+import initializeCarousel from "../../js/carousel.js";
 
 import { projectsData } from "../../js/data/portfolio-projects.js";
 
@@ -20,9 +22,10 @@ const projectActionContainer = document.querySelector(
 const projectBackgroundElement = document.querySelector(
   ".project-background__text"
 );
-const projectPreviewsContainer = document.querySelector(
-  ".project-background__preview"
-);
+const projectPreviewsContainer = document
+  .getElementById("preview-carousel")
+  .querySelector(".carousel__content");
+console.log(projectPreviewsContainer);
 const btnPreviousProject = document.querySelector(".navigation__btn--left");
 const btnNextProject = document.querySelector(".navigation__btn--right");
 
@@ -71,7 +74,7 @@ const updatePageWithData = function (projectData) {
   // Update project previews
   projectData.figure.preview.forEach((previewImg) => {
     projectPreviewsContainer.innerHTML += `
-    <div class="project-background__preview-img">
+    <div class="carousel__item">
       <img
         src="../../assets/images/portfolio/${previewImg}"
         alt="Project preview"
@@ -112,5 +115,6 @@ const showErrorMessage = function () {
     return;
   }
   updatePageWithData(projectData);
+  initializeCarousel("preview-carousel");
   updateNavigationButtons(projectId);
 })();
