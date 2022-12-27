@@ -15,7 +15,9 @@
 }
 
 .project-hero {
-  height: 50rem;
+  height: 60vw;
+  min-height: 35rem;
+  max-height: 52rem;
   margin-top: 3rem;
   margin-bottom: 10rem;
   @include media("tablet") {
