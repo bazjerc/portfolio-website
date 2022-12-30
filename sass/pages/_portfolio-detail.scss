@@ -89,6 +89,7 @@
   &__text {
     @extend %paragraph;
     margin-bottom: 2.5rem;
+    white-space: pre-wrap;
   }
   .carousel {
     height: 25vw;
