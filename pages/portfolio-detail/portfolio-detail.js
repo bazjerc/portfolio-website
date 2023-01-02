@@ -25,7 +25,7 @@ const projectBackgroundElement = document.querySelector(
 const projectPreviewsContainer = document
   .getElementById("preview-carousel")
   .querySelector(".carousel__content");
-console.log(projectPreviewsContainer);
+
 const btnPreviousProject = document.querySelector(".navigation__btn--left");
 const btnNextProject = document.querySelector(".navigation__btn--right");
 
@@ -41,6 +41,8 @@ const getProjectData = function (projectId) {
 };
 
 const updatePageWithData = function (projectData) {
+  // Update page title
+  document.title = document.title + ` - ${projectData.name}`;
   // Update hero image
   projectHeroImage.innerHTML = `
     <img src="../../assets/images/portfolio/${projectData.figure.hero}" alt="Project thumbnail" />
