@@ -5,7 +5,7 @@ const projectsData = [
     description:
       "This is a simple news feed that displays news about three different subjects.",
     descriptionLong:
-      "This project was made as part of my Crio Full-Stack learning journey.\r\n\nThe news feed displays news on subjects of COVID-19, India Tech and Sportstar. App is built using vanilla JS and utilizes the Bootstrap CSS framework to implement the logic for accordion and carousel functionality. These components were then further customized by me to satisfy the design requirements.\r\n\nThe app fetches data on latest ten articles for each subject in the form of RSS feed (which is converted to JSON) and then displays it. User can then flip through the stub articles one by one and if they wish to learn more about the subject, they can follow the link to the published article.",
+      "This project was made as part of my Crio Full-Stack learning journey.\r\n\nThe feed displays news on subjects of COVID-19, India Tech and Sportstar. App is built using vanilla JS and utilizes the Bootstrap CSS framework to implement logic for accordion and carousel functionality. These components were then further customized by me to satisfy the design requirements.\r\n\nThe app fetches data on latest ten articles for each subject in the form of RSS feed (which is converted to JSON) and then displays it. User can then flip through the stub articles one by one and if they wish to learn more about the subject, they can follow the link to the published article.",
     keywords: {
       category: ["Front End Development"],
       tech: ["HTML", "CSS", "JS", "Bootstrap"],
@@ -27,7 +27,7 @@ const projectsData = [
     description:
       "This is a travel website that allows users to book adventures across the world and check on their reservations.",
     descriptionLong:
-      "This project was made as part of my Crio Full-Stack learning journey.\r\n\nThis dynamic website allows users to check out diffrent adventures and book them if they find them interesting. Adventures themselves are sorted by city. When a city is selected, available adventures in that city can then be filtered further by their duration and category. When an adventure is selected, it can then be reserved. User can also check on their previous reservations at any time.\r\n\nUser interface was built with the help of Bootstrap CSS framework. In the backgroud, app fetches required data from a REST API, which was provided in advance. This project introduced me to asynchronous JS programming. It was a huge step in my journey to become a fully fledged JS developer.",
+      "This project was made as part of my Crio Full-Stack learning journey.\r\n\nThis dynamic website allows users to check out different adventures and book them if they find them interesting. Adventures themselves are sorted by city. When a city is selected, available adventures in that city can then be filtered further by their duration and category. User can also reserve an adventure for a particular date if they so desire. Previous reservations can be checked at any time.\r\n\nUser interface was built with the help of Bootstrap CSS framework. In the backgroud, app fetches required data from a REST API, which was provided in advance. This project introduced me to asynchronous JS programming. It was a huge step in my journey to become a fully fledged JS developer.",
     keywords: {
       category: ["Front End Development"],
       tech: ["HTML", "CSS", "JS", "Bootstrap"],
@@ -72,9 +72,9 @@ const projectsData = [
     id: "xflix",
     name: "XFlix",
     description:
-      "A video streaming platform which provides content to watch and also allows users to upload thir own videos.",
+      "A video streaming platform which provides videos to watch and also allows users to upload their own.",
     descriptionLong:
-      "This project was made as part of my Crio Full-Stack learning journey.\r\n\nThe streaming platform features a dashboard view, where users can filter available videos by their title, content category and age rating. Content can also be sorted according to its upload date or view count. When a video is clicked, user is redirected to a video player, where they can watch the video and rate it accordingly. Video player is implemented using an iframe, which displays an embedded Youtube video.\r\n\nUser inteface for the platform was built using the React library along with MUI component library. Site is not yet fully functional as it uses a Postman mock API to fetch mock data. The website will be connected to a working backend later, when my Crio learning journey switches it's focus to backend programming.",
+      "This project was made as part of my Crio Full-Stack learning journey.\r\n\nThe streaming platform features a dashboard view, where users can filter available videos by their title, content category and age rating. Content can also be sorted according to it's upload date or view count. When a video is clicked, user is redirected to a video player, where they can watch the video and rate it accordingly. Video player is implemented using an iframe, which displays an embedded Youtube video.\r\n\nUser inteface for the platform was built using the React library along with MUI component library. Site is not yet fully functional as it uses a Postman mock API to fetch mock data. The website will be connected to a working backend later, when my Crio learning journey switches it's focus to backend programming.",
     keywords: {
       category: ["Front End Development"],
       tech: ["HTML", "CSS", "JS", "React", "Axios", "MUI", "Postman"],
@@ -94,9 +94,9 @@ const projectsData = [
     id: "calculator",
     name: "Calculator",
     description:
-      "The calculator I developed allows the user to do simple arithmetic operations like addition, subtraction, multiplication and division.",
+      "The calculator I developed allows user to do simple arithmetic operations like addition, subtraction, multiplication and division.",
     descriptionLong:
-      "Calculators logic was written using the OOP paradigm to organize code. For it's layout, CSS grid and flexbox were used. If a number is divided by 0, the calculator will also display an error.",
+      "Calculators logic was written using the OOP paradigm to organize code. For it's layout, CSS grid and flexbox were used. If a number is divided by 0, calculator will also display an error.",
     keywords: {
       category: ["Front End Development", "OOP"],
       tech: ["HTML", "CSS", "JS"],
@@ -118,7 +118,7 @@ const projectsData = [
     description:
       "This is a social proof static website of a fictional company.",
     descriptionLong:
-      "The website is static and responsive. For layout purposes, I used the CSS Flexbox module. CSS code was written and organized with the help of SASS preprocessor and using BEM notation.\r\n\nThe design was provided as part of a front-end-mentor challenge.",
+      "The website is static and responsive. For layout purposes, I used the CSS Flexbox module. CSS code was written and organized with the help of SASS preprocessor and using BEM notation.\r\n\nThe design was provided as part of a Front-end-mentor challenge.",
     keywords: {
       category: ["Front End Development"],
       tech: ["HTML", "CSS", "SASS"],
@@ -138,9 +138,9 @@ const projectsData = [
     id: "user-list",
     name: "User List",
     description:
-      "This is a simple app that allows to save a list of usernames along with age.",
+      "This is a simple app that saves a list of usernames along with age.",
     descriptionLong:
-      'The app saves a list of usernames along with age and also allows to later edit or delete the items from list. If input is invalid, a modal window will alert the user.\r\n\nThis project was my first attempt in using the React library. It allowed me to practice React concepts such as state management, passing data between components through props, "lifing state up", conditional rendering, using portals and more. It made me realize the potential that React library offers when building user interfaces.',
+      'The app saves a list of usernames along with age and also allows to later edit or delete items from the list. If input is invalid, a modal window will alert the user.\r\n\nThis project was my first attempt in using the React library. It allowed me to practice React concepts such as state management, passing data between components through props, "lifing state up", conditional rendering, using portals and more. It made me realize the potential that React library offers when building user interfaces.',
     keywords: {
       category: ["Front End Development"],
       tech: ["HTML", "CSS", "JS", "React"],
