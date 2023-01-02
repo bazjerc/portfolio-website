@@ -25,10 +25,7 @@ main {
   justify-content: center;
 }
 
-a:link,
-a:visited,
-a:hover,
-a:active {
+a {
   color: inherit;
   text-decoration: none;
 }
