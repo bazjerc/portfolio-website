@@ -120,6 +120,9 @@ textarea {
     height: 11rem;
   }
 }
+.header__home-link {
+  line-height: 0;
+}
 .header__logo {
   height: 3.2rem;
 }

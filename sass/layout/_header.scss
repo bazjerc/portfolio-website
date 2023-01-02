@@ -17,6 +17,9 @@
   @include media("tablet") {
     height: 11rem;
   }
+  &__home-link {
+    line-height: 0;
+  }
   &__logo {
     height: 3.2rem;
   }
