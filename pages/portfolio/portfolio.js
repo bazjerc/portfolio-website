@@ -29,7 +29,7 @@ const generateProjectCard = function (projectData) {
           </p>
         </div>
         <div class="card__action">
-          <a href="/pages/portfolio-detail?project=${projectData.id}"><button class="btn">View project</button></a>
+          <a href="/pages/portfolio-detail/?project=${projectData.id}"><button class="btn">View project</button></a>
         </div>
       </div>
     </div>
