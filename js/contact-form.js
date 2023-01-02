@@ -31,7 +31,6 @@ const hideValidationText = function (input) {
 };
 
 const showSubmitText = function (type = "valid") {
-  console.log("show");
   if (type === "valid") {
     submitText.textContent = "Thank you for your message!";
     submitText.style.visibility = "visible";
@@ -148,14 +147,14 @@ const sendFormData = function (formData) {
   const reqOptions = {
     method: "POST",
     headers: {
-      "Content-Type": "application/json",
+      Accept: "application/json",
     },
-    body: JSON.stringify(formData),
+    body: formData,
   };
 
-  const res = fetch("https://formbold.com/s/60vM3", reqOptions);
+  const res = fetch("https://formspree.io/f/xqkokajj", reqOptions);
 
-  return res.then((res) => res.status);
+  return res;
 };
 
 const resetForm = function () {
@@ -181,25 +180,26 @@ const submitForm = async function (e) {
   const isEmailValid = validateEmail(email);
   const isMessageValid = validateMessage(message);
 
-  const isFormValid = isNameValid && isEmailValid && isMessageValid;
-
-  if (!isFormValid) return;
+  if (!(isNameValid && isEmailValid && isMessageValid)) return;
 
   const formData = new FormData(contactForm);
 
   formSubmitBtn.setAttribute("disabled", true);
 
-  const resStatus = await sendFormData(formData);
-
   await new Promise((resolve) => {
-    setTimeout(() => resolve(), 1000);
+    setTimeout(() => resolve(), 500);
   });
 
-  if (resStatus === 200) {
-    resetForm();
-    showSubmitText();
-    hideSubmitTextTimer = setTimeout(() => hideSubmitText(), 5000);
-  } else {
+  try {
+    const res = await sendFormData(formData);
+    if (res.ok) {
+      resetForm();
+      showSubmitText();
+      hideSubmitTextTimer = setTimeout(() => hideSubmitText(), 5000);
+    } else {
+      throw Error();
+    }
+  } catch (err) {
     showSubmitText("invalid");
   }
 
