@@ -692,7 +692,7 @@ textarea {
   transition: transform 0.1s ease-out;
 }
 .card__figure img.scaled {
-  transform: scale(104%);
+  transform: scale(103%);
 }
 .card__figure--bio img {
   transition: filter 3s linear;
